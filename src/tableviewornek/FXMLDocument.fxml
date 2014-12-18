@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="tableviewornek.FXMLDocumentController">
+   <children>
+      <TableView fx:id="tablo" editable="true" prefHeight="400.0" prefWidth="323.0" AnchorPane.bottomAnchor="0.0">
+        <columns>
+          <TableColumn fx:id="numara" prefWidth="95.0" text="No" />
+          <TableColumn fx:id="adi" prefWidth="96.0" text="Adı" />
+          <TableColumn fx:id="soyadi" prefWidth="127.0" text="Soyadı" />
+        </columns>
+         <contextMenu>
+            <ContextMenu>
+              <items>
+                <MenuItem mnemonicParsing="false" onAction="#silmeIslemi" text="Sil" />
+                  <MenuItem mnemonicParsing="false" text="Degistir" />
+              </items>
+            </ContextMenu>
+         </contextMenu>
+      </TableView>
+      <TextField fx:id="txt_no" layoutX="415.0" layoutY="48.0" />
+      <Label layoutX="331.0" layoutY="53.0" text="No" />
+      <Label layoutX="331.0" layoutY="99.0" text="Adı" />
+      <TextField fx:id="txt_adi" layoutX="415.0" layoutY="94.0" />
+      <Label layoutX="331.0" layoutY="136.0" text="Soyadı" />
+      <TextField fx:id="txt_soyadi" layoutX="415.0" layoutY="131.0" />
+      <Button layoutX="331.0" layoutY="213.0" mnemonicParsing="false" onAction="#kayitEkle" text="Ekle" />
+   </children>
+</AnchorPane>
